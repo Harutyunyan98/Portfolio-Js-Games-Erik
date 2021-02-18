@@ -1,4 +1,3 @@
-
 body {
   width: 100%;
   height: 100%;
@@ -17,70 +16,44 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
-
 }
-
-.game-info {
-  margin-top: 50px;
-  margin-left: 30px;
-  width: 50px;
-  height: 50px;
-  background: url('../svg/iconfinder_refresh_293697.svg') no-repeat;
-  cursor: pointer;
-}
-.game-info:hover {
-  background: url('../svg/reload.svg') no-repeat;
-}
-
-
 
 .game-board {
-  background: -webkit-linear-gradient(290deg, #02CCBA 0%, #AA7ECD 100%);
-  background: linear-gradient(160deg, #02CCBA 0%, #AA7ECD 100%);
   border-radius: 10px;
-  /* box-shadow: 5px 5px 9px 1px rgb(0 0 0 / 80%); */
   box-shadow: 0px 10px 20px 13px rgb(0 0 0 / 78%);
   margin-top: 5vh;
   background: transparent;
-  /*border: 2px solid;*/
   background: -moz-linear-gradient(top left, #19010F, #010713);
   background: -moz-linear-gradient(top left, #4A012B, #014154);
-}
-ol, ul {
-  padding-left: 30px;
 }
 
 .board-row:after {
   clear: both;
   content: "";
   display: table;
-
 }
 
-.status {
-  margin-bottom: 10px;
-
-}
 .square {
-   width: 200px;
-   height: 200px;
-   background: #05080a;
-   border: 0px solid;
-   border-radius: 8px;
-   float: left;
-   font-size: 134px;
-   box-shadow: 12px 15px 20px 0px rgb(52 52 52 / 20%);
-   font-weight: bold;
-   line-height: 34px;
-   text-align: center;
-   margin: 20px 25px;
-   padding: 0;
-   text-align: center;
+  width: 200px;
+  height: 200px;
+  background: #05080a;
+  border: 0px solid;
+  border-radius: 8px;
+  float: left;
+  font-size: 134px;
+  box-shadow: 12px 15px 20px 0px rgb(52 52 52 / 20%);
+  font-weight: bold;
+  line-height: 34px;
+  text-align: center;
+  margin: 20px 25px;
+  padding: 0;
+  text-align: center;
 }
-.square:focus {
 
+.square:focus {
   outline: none;
 }
+
 .res {
   display: none;
   position: fixed;
@@ -95,8 +68,10 @@ ol, ul {
   font-size: 5rem;
   flex-direction: column;
   text-align: center;
+  z-index: 99;
 }
-.res.show{
+
+.res.show {
   display: flex;
 }
 
@@ -115,13 +90,14 @@ ol, ul {
 }
 
 .res-res:focus {
-
   outline: none;
 }
-@media only screen and (max-height: 700px) {
-	.square {
+
+@media only screen and (max-height: 700px) and (max-width: 1400px) {
+  .square {
     width: 150px;
     height: 150px;
+  }
 }
 
 @media only screen and (min-width: 2000px) {
@@ -131,11 +107,12 @@ ol, ul {
     font-size: 134px;
     margin: 20px 25px;
     box-shadow: 12px 15px 20px 0px rgba(46, 61, 73, 0.5);
-
   }
-.res {
-  font-size: 5rem;
-}
+
+  .res {
+    font-size: 5rem;
+  }
+
 }
 
 @media only screen and (max-width: 830px) {
@@ -152,10 +129,7 @@ ol, ul {
   }
 }
 
-
-
-
-@media only screen and (max-width: 695px) {
+@media only screen and (max-device-width: 695px) {
   .square {
     width: 110px;
     height: 110px;
@@ -165,9 +139,7 @@ ol, ul {
   }
 }
 
-
-
-@media only screen and (max-width: 495px) {
+@media only screen and (max-device-width: 495px) {
   .square {
     width: 90px;
     height: 90px;
@@ -177,9 +149,8 @@ ol, ul {
   }
 }
 
-@media only screen and (max-width: 480px)
-{
-.square {
+@media only screen and (max-width: 480px) {
+  .square {
     width: 70px;
     height: 70px;
     font-size: 40px;
@@ -188,10 +159,8 @@ ol, ul {
   }
 }
 
-
-@media only screen and (max-width: 300px)
-{
-.square {
+@media only screen and (max-device-width: 300px) {
+  .square {
     width: 50px;
     height: 50px;
     font-size: 33px;
